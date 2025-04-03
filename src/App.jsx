@@ -10,9 +10,7 @@ const average = (arr) =>
 
 const KEY = "6afb81e8";
 
-
 export default function App() {
-
   const { setMovies } = useMovies();
 
   useEffect(() => {
@@ -22,14 +20,12 @@ export default function App() {
         console.log("API data:", data);
         setMovies(data.Search);
       });
-    
   }, [setMovies]);
-
 
   return (
     <>
-        <NavBar />
-        <Main />
+      <NavBar />
+      <Main />
     </>
   );
 }
@@ -108,8 +104,7 @@ function MovieList() {
     <ul className="list">
       {movies?.map((movie) => (
         <Movie movie={movie} key={movie.imdbID} />
-       ))}
-    
+      ))}
     </ul>
   );
 }
