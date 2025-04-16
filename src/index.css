@@ -29,7 +29,6 @@ body {
   padding: 2.4rem;
 }
 
-/* ******* */
 
 .nav-bar {
   display: grid;
@@ -73,7 +72,6 @@ body {
   padding: 4.8rem;
 }
 
-/* ******* */
 
 .logo {
   display: flex;
@@ -210,7 +208,6 @@ body {
   background-color: var(--color-red-dark);
 }
 
-/* ******* */
 
 .summary {
   padding: 2.2rem 3.2rem 1.8rem 3.2rem;
@@ -239,7 +236,6 @@ body {
   gap: 0.8rem;
 }
 
-/* ******* */
 
 .details {
   line-height: 1.4;
@@ -341,14 +337,5 @@ body {
   justify-content: center;
 }
 
-/*
-SPACING SYSTEM (px)
-2 / 4 / 8 / 12 / 16 / 24 / 32 / 40 / 48 / 64 / 80 / 96 / 128
 
-FONT SIZE SYSTEM (px)
-10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 /52 / 62 / 74 / 86 / 98
-*/
-
-/*
-FULL STAR
 
