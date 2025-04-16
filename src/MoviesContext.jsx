@@ -1,12 +1,11 @@
-import { useState, createContext, useContext, Children } from "react";
-import { tempMovieData, tempWatchedData } from "./data";
+import { useState, createContext, useContext} from "react";
 
 // 1.create & export context
 const MoviesContext = createContext();
 
 export function MoviesProvider({ children }) {
-  const [movies, setMovies] = useState(tempMovieData);
-  const [watched, setWatched] = useState(tempWatchedData);
+  const [movies, setMovies] = useState([]);
+  const [watched, setWatched] = useState([]);
 
   return (
     <MoviesContext.Provider value={{ movies, setMovies, watched, setWatched }}>

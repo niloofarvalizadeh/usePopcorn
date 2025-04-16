@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { MoviesProvider } from "./MoviesContext";
 import { useMovies } from "./MoviesContext";
 
@@ -8,14 +8,28 @@ const average = (arr) =>
 
 // ------------------------------------------------------------
 
+const KEY = "6afb81e8";
+
+
 export default function App() {
+
+  const { setMovies } = useMovies();
+
+  useEffect(() => {
+    fetch(`https://www.omdbapi.com/?apikey=${KEY}&s=interstellar`)
+      .then((res) => res.json())
+      .then((data) => {
+        console.log("API data:", data);
+        setMovies(data.Search);
+      });
+    
+  }, [setMovies]);
+
+
   return (
     <>
-      <MoviesProvider>
-        {" "}
         <NavBar />
         <Main />
-      </MoviesProvider>
     </>
   );
 }
@@ -94,7 +108,8 @@ function MovieList() {
     <ul className="list">
       {movies?.map((movie) => (
         <Movie movie={movie} key={movie.imdbID} />
-      ))}
+       ))}
+    
     </ul>
   );
 }

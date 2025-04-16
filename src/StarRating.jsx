@@ -1,4 +1,5 @@
 import { useState } from "react";
+// import PropTypes from 'prop-types';
 
 const starStyle = {
   width: "48px",
@@ -6,6 +7,16 @@ const starStyle = {
   display: "block",
   cursor: "pointer",
 };
+
+// StarRating.propTypes = {
+//   maxRating: PropTypes.number,
+//   defaultRating: PropTypes.number,
+//   color: PropTypes.string,
+//   size: PropTypes.number,
+// };
+
+
+
 
 export default function StarRating({
   maxRating = 5,
@@ -15,6 +26,12 @@ export default function StarRating({
 }) {
   const [rating, setRating] = useState(defaultRating);
   const [tempRating, setTempRating] = useState(0);
+
+
+
+ 
+
+
   return (
     <div
       style={{
